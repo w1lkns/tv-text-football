@@ -1,38 +1,60 @@
-.App {
+body,
+html {
+  padding: 0;
+  color: rgb(210, 210, 210) !important;
+  background-color: black !important;
+  font-family: "VT323", "Courier New", Courier, monospace !important;
+  font-weight: bold !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+button {
+  background: grey;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+table {
+  margin: 25px 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
   text-align: center;
+  padding: 8px;
+  border: 1px rgb(255, 255, 255); /* keeping the retro teletext style */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Promotion positions (1st and 2nd) */
+.promotion td {
+  background-color: gold; /* Gold background for promotion */
+  color: black; /* Contrast text color */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Playoff positions (3rd to 6th) */
+.playoff td {
+  background-color: green; /* Green background for playoff teams */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Relegation positions (22nd to 24th) */
+.relegation td {
+  background-color: darkred; /* Dark red for relegation */
+  color: white;
 }
